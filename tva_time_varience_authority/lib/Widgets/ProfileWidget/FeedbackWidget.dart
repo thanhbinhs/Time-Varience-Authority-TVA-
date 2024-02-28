@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'VariableDataClass.dart';
 
 class FeedbackWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
+    VariableData variableData = VariableData(context);
+    double screenWidth = variableData.screenWidth();
     return Padding(
       padding: EdgeInsets.all(15),
       child: Container(
         //color: Colors.green,
-        height: 180,
+        height: variableData.ContainerHeight0(),
         child: Column(
           children: [
             Row(
@@ -18,7 +19,7 @@ class FeedbackWidget extends StatelessWidget{
                 Text(
                   "Feedback",
                   style: TextStyle(
-                    fontSize: 17,
+                    fontSize: variableData.titleFontSize(),
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -28,8 +29,8 @@ class FeedbackWidget extends StatelessWidget{
             Stack(
               children: [
                 Container(
-                  height: 170 - 30,
-                  //color: Colors.blue,
+                  height: variableData.ContainerHeight1(),
+                  //color: Colors.red,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.blue,
@@ -43,14 +44,14 @@ class FeedbackWidget extends StatelessWidget{
                         print('Vùng đã được ấn vào Help Center!');
                       },
                       child: Container(
-                        height: (170 - 30) / 2,
+                        height: variableData.ContainerHeight1()/2,
                         width: screenWidth - 15 * 2,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Container(
-                              height: (170 - 30) / 2,
-                              width: (screenWidth - 15 * 2) / 2,
+                              height: variableData.ContainerHeight1()/2,
+                              width: (screenWidth - 15 * 2) / 1.46,
                               //color: Colors.red,
                               child: Padding(
                                 padding: EdgeInsets.all(20),
@@ -61,7 +62,7 @@ class FeedbackWidget extends StatelessWidget{
                                     Text(
                                       "Help Center",
                                       style: TextStyle(
-                                        fontSize: 17,
+                                        fontSize: variableData.titleFontSize(),
                                       ),
                                     ),
                                   ],
@@ -69,8 +70,8 @@ class FeedbackWidget extends StatelessWidget{
                               ),
                             ),
                             Container(
-                              height: (170 - 30) / 2,
-                              width: (screenWidth - 15 * 2) / 2,
+                              height: variableData.ContainerHeight1()/2,
+                              width: (screenWidth - 15 * 2) / (3.25),
                               //color: Colors.yellow,
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
@@ -89,13 +90,13 @@ class FeedbackWidget extends StatelessWidget{
                         print('Vùng đã được ấn vào! Feedback');
                       },
                       child: Container(
-                        height: (170 - 30) / 2,
+                        height: variableData.ContainerHeight1()/2,
                         width: screenWidth - 15 * 2,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Container(
-                              height: (170 - 30) / 2,
+                              height: variableData.ContainerHeight1()/2,
                               width: (screenWidth - 15 * 2) / 2,
                               //color: Colors.red,
                               child: Padding(
@@ -107,7 +108,7 @@ class FeedbackWidget extends StatelessWidget{
                                     Text(
                                       "Feedback",
                                       style: TextStyle(
-                                        fontSize: 17,
+                                        fontSize: variableData.titleFontSize(),
                                       ),
                                     ),
                                   ],
@@ -115,7 +116,7 @@ class FeedbackWidget extends StatelessWidget{
                               ),
                             ),
                             Container(
-                              height: (170 - 30) / 2,
+                              height: variableData.ContainerHeight1()/2,
                               width: (screenWidth - 15 * 2) / 2,
                               //color: Colors.yellow,
                               child: Row(

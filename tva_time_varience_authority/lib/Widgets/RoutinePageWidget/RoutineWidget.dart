@@ -1,106 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:tva_time_varience_authority/Pages/AddNewTaskPage.dart';
+import 'package:tva_time_varience_authority/Widgets/RoutinePageWidget/ActionInTaskWidget/ActionInTaskWidget.dart';
+import 'package:tva_time_varience_authority/Widgets/RoutinePageWidget/ListTaskWidget/ListTaskWidget.dart';
+import 'package:tva_time_varience_authority/Widgets/RoutinePageWidget/TimeTableWidget/TimeTableWidget.dart';
 
-class RoutineWidget extends StatelessWidget {
+class RoutineWidget extends StatefulWidget {
   @override
+  State<RoutineWidget> createState() => _RoutineWidgetState();
+}
+
+class _RoutineWidgetState extends State<RoutineWidget> {
+  @override
+
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height; // 890.285714
+    double screenWidth = MediaQuery.of(context).size.width; //411.428571
+    double fontSize = screenHeight / 44.5; // 20
+    PageController _pageController = PageController(initialPage: 0);
     return Container(
       color: Color(0xFFF0FFF0),
       child: Column(
         children: [
-          SizedBox(
-            height: 15,
-          ),
-          Padding(
-            padding: EdgeInsets.all(4.0),
-            child: Text(
-              "Today",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
-            ),
-          ),
-          Stack(
-            children: [
-              Container(
-                height: screenHeight * 0.13,
-                color: Color(0xFFF0FFF0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 90,
-                      child: PageView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 4,
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding:
-                            EdgeInsets.all(2),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(20),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 1,
-                                    blurRadius: 5,
-                                    offset: Offset(0, 2),
-                                  ),
-                                ],
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  for (int i = 0; i< 7; i++)
-                                  Container(
-                                    width: 50,
-                                    height: 75,
-                                    decoration: BoxDecoration(
-                                      color: Colors.blue,
-                                      borderRadius: BorderRadius.circular(30),
-                                    ),
-
-                                    child: Column(
-                                      children: [
-                                        SizedBox(
-                                          height: 7,
-                                        ),
-                                        Text(
-                                          "Mo",
-                                          style: TextStyle(
-                                            color: Colors.grey,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-
+          //SizedBox(height: 10,),
+          //************************************ Time Table **********************************
+          TimeTableWidget(),
           //**********************************List Task*************************************
           Stack(
             children: [
               Container(
-                height: 700,
+                height: screenHeight/ 1.27,
                 width: screenWidth,
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(15),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(0.5),
@@ -112,41 +45,23 @@ class RoutineWidget extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    SizedBox(height: 10,),
                     Container(
-                      height: screenHeight - 10 - screenHeight * 0.13 - 100,
-                      width: screenWidth - 20 ,
+                      height: screenHeight - screenHeight * 0.13 - 110,
+                      width: screenWidth,
                       decoration: BoxDecoration(
                         //color: Colors.green,
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      child: ListView(
-                        scrollDirection: Axis.vertical,
+                      child: Column(
                         children: [
-                          Padding(
-                            padding: EdgeInsets.all(6),
-                            child: Container(
-                              height: 150,
-                              decoration: BoxDecoration(
-                                color: Colors.green,
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                            ),
-                          ),
-
-                          for(int i = 0; i < 10; i++)
-                          Padding(
-                            padding: EdgeInsets.all(6),
-                            child: Container(
-                              height: 80,
-                              decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 185, 211, 238),
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                            ),
-                          ),
+                          SizedBox(height: 10,),
+                          // **************************************** ActionInTask *************************************//
+                          ActionInTaskWidget(),
+                              //************************************ List Task Widget ****************************//
+                          ListTaskWidget(),
                         ],
                       ),
+
                     )
                   ],
                 ),
@@ -157,28 +72,29 @@ class RoutineWidget extends StatelessWidget {
                 left: screenWidth - 70,
                 top: screenHeight - 320,
                 child: Container(
-                  height: 60,
-                  width: 60,
+                  height: 50,
+                  width: 50,
                   decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.circular(50),
                   ),
                   child: IconButton(
-                    icon: Icon(
-                      Icons.add,
-                      size: 30,
+                      icon: Icon(
+                        Icons.add,
+                        size: 30,
+                      ),
+                      onPressed: () {
+                        showModalBottomSheet(
+                          context: context,
+                          elevation: 5,
+                          isScrollControlled: true,
+                          builder: (_) => AddNewTaskPage(),
+                        );
+                      },
                     ),
-                    onPressed: () {
-                      showDialog(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return AddNewTaskPage();
-                        },
-                      );
-                    },
-                  ),
                 ),
               ),
+
             ],
           ),
         ],
@@ -186,3 +102,8 @@ class RoutineWidget extends StatelessWidget {
     );
   }
 }
+
+
+
+
+

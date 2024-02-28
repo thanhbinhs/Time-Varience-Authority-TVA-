@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tva_time_varience_authority/Widgets/ProfileWidget/ChangeLanguageWidget.dart';
 import 'package:tva_time_varience_authority/Widgets/ProfileWidget/FeedbackWidget.dart';
 import 'package:tva_time_varience_authority/Widgets/ProfileWidget/SettingsWidget.dart';
+import 'VariableDataClass.dart';
 
 
 
@@ -9,8 +10,8 @@ class ProfileWidget extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
+    VariableData variableData = VariableData(context);
+    double screenHeight = MediaQuery.of(context).size.height; // 890.285714
     return
       Stack(
         children: [
@@ -40,7 +41,7 @@ class ProfileWidget extends StatelessWidget{
                                   'Profile',
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 35,
+                                    fontSize: screenHeight / 24,
                                   ),
                                 ),
                               ],
@@ -76,8 +77,6 @@ class ProfileWidget extends StatelessWidget{
               ],
             ),
           ),
-
-
 
         ],
       );

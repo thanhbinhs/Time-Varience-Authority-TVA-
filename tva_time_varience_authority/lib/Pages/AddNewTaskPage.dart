@@ -4,39 +4,67 @@ import 'package:flutter/material.dart';
 class AddNewTaskPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height; // 890.285714
+    double screenWidth = MediaQuery.of(context).size.width; //411.428571
+    return Container(
+      width: screenWidth,
+      height: screenHeight - 100,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        //color: Colors.orange,
+      ),
+      padding: EdgeInsets.only(
+        top: 15,
+        left: 15,
+        right: 15,
+        bottom: MediaQuery.of(context).viewInsets.bottom,
+      ),
+      child: Column(
+        children: [
+          Container(
+            height: 50,
+            color: Colors.orange,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                IconButton(
+                  onPressed: (){
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(
+                    Icons.arrow_back,
+                    size: 25,
+                  ),
+                ),
+                TextButton(
+                  onPressed: (){
 
-    return Dialog(
-      backgroundColor: Colors.transparent,
-      insetPadding: EdgeInsets.only(bottom: 0),
-      child: Align(
-        alignment: Alignment.bottomCenter,
-        child: Container(
-          width: screenWidth,
-          height: screenHeight * 0.7,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(20),
-              topRight: Radius.circular(20),
+                  },
+                  child: Text(
+                    "Create",
+                    style: TextStyle(
+                      fontSize: 17,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-          child: Column(
-            children: [
-              Text('Cửa sổ đè lên'),
-              Text('Nội dung của cửa sổ đè lên'),
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: Text('Đóng'),
-              ),
-            ],
+
+          Container(
+            height: 70,
+            color: Colors.yellow,
+            child: IconButton(
+              icon: Icon(Icons.abc),
+              onPressed: (){},
+            ),
           ),
-        ),
+          Container(
+            height: 70,
+            color: Colors.yellow,
+          ),
+        ],
       ),
     );
   }
 }
-

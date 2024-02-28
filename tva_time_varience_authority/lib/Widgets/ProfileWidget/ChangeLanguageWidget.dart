@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:tva_time_varience_authority/Widgets/ProfileWidget/VariableDataClass.dart';
 
 class ChangeLanguageWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-  double screenHeight = MediaQuery.of(context).size.height;
-  double screenWidth = MediaQuery.of(context).size.width;
+    VariableData variableData = VariableData(context);
+    double screenWidth = MediaQuery.of(context).size.width;
     return  Padding(
       padding: EdgeInsets.all(15),
       child: Container(
         //color: Colors.green,
-        height: 70,
+        height: variableData.ContainerHeight1() / 2,
         child: Column(
           children: [
             Row(
@@ -20,7 +21,7 @@ class ChangeLanguageWidget extends StatelessWidget{
             Stack(
               children: [
                 Container(
-                  height: 70,
+                  height: variableData.ContainerHeight1() / 2,
                   //color: Colors.blue,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
@@ -35,14 +36,15 @@ class ChangeLanguageWidget extends StatelessWidget{
                         print('Vùng đã được ấn vào Help Center!');
                       },
                       child: Container(
-                        height: (170 - 30) / 2,
+                        //color: Colors.red,
+                        height: variableData.ContainerHeight1() / 2,
                         width: screenWidth - 15 * 2,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Container(
-                              height: (170 - 30) / 2,
-                              width: (screenWidth - 15 * 2) / 1.34,
+                              height: variableData.ContainerHeight1() / 2,
+                              width: (screenWidth - 15 * 2) / 1.26,
                               //color: Colors.red,
                               child: Padding(
                                 padding: EdgeInsets.all(20),
@@ -53,7 +55,7 @@ class ChangeLanguageWidget extends StatelessWidget{
                                     Text(
                                       "Change app language",
                                       style: TextStyle(
-                                        fontSize: 17,
+                                        fontSize: variableData.titleFontSize(),
                                       ),
                                     ),
                                   ],
@@ -61,8 +63,8 @@ class ChangeLanguageWidget extends StatelessWidget{
                               ),
                             ),
                             Container(
-                              height: (170 - 30) / 2,
-                              width: (screenWidth - 15 * 2) / 4,
+                              height: variableData.ContainerHeight1() / 2,
+                              width: (screenWidth - 15 * 2) / 5,
                               //color: Colors.yellow,
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
