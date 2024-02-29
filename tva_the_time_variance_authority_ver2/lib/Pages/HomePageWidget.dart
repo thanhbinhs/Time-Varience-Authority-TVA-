@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:tva_the_time_variance_authority_ver2/Pages/LibraryWidget.dart';
 import 'ProfileWidget.dart';
 import 'RoutineWidget.dart';
@@ -42,24 +41,25 @@ class _HomePageState extends State<HomePage> {
                     HapticFeedback.vibrate();
                     setState(() {
                       currentIndex = 0;
+                      //print(variableData.screenHeight() * 0.087209);
                     });
                   },
                     child: Padding(
                       padding: EdgeInsets.all(10),
                       child: Container(
-                        width: 70,
+                        width: variableData.screenHeight() * 0.087209,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Container(
-                              height: 50,
+                              height: variableData.screenHeight() * 0.06229,
                               child: Icon(
                                 Icons.abc,
                                 size: 30,
                               ),
                             ),
                             Container(
-                              height: 15,
+                              height: variableData.screenHeight() * 0.022425,
                               child: Text(
                                 'Routine',
                                 style: TextStyle(
@@ -83,19 +83,20 @@ class _HomePageState extends State<HomePage> {
                   child: Padding(
                     padding: EdgeInsets.all(10),
                     child: Container(
-                      width: 70,
+                      width: variableData.screenHeight() * 0.087209,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Container(
-                            height: 50,
+                            height: variableData.screenHeight() * 0.06229,
                             child: Icon(
                               Icons.abc,
                               size: 30,
                             ),
                           ),
                           Container(
-                            height: 15,
+                            height: variableData.screenHeight() * 0.022425,
+                            //color: Colors.yellow,
                             child: Text(
                               'Library',
                               style: TextStyle(
@@ -120,21 +121,20 @@ class _HomePageState extends State<HomePage> {
                   child: Padding(
                     padding: EdgeInsets.all(10),
                     child: Container(
-                      width: 90,
+                      width: variableData.screenHeight() * 0.087209,
                       // color: Colors.orange,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Container(
-                            height: 50,
+                            height: variableData.screenHeight() * 0.06229,
                             child: Icon(
                               Icons.abc,
                               size: 30,
                             ),
                           ),
                           Container(
-                            height: 18,
-                            width: 90,
+                            height: variableData.screenHeight() * 0.022425,
                             //color: Colors.green,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -148,14 +148,12 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ],
                             )
-
                           ),
                         ],
                       ),
                     ),
                   ),
                 ),
-
               ],
             ),
           ),

@@ -37,7 +37,7 @@ class MainTaskWidget extends StatelessWidget{
                   children: [
                     Container(
                       //color: Colors.yellow,
-                      height: 160,
+                      height: variableData.screenHeight() * 0.19933,
                       child: Padding(
                         padding: EdgeInsets.all(10),
                         child: PageView(
@@ -74,7 +74,7 @@ class MainTaskWidget extends StatelessWidget{
                             Padding(
                               padding: EdgeInsets.symmetric(vertical: 5,horizontal: 20),
                               child: Container(
-                                height: 80,
+                                height: variableData.screenHeight() * 0.099667,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
                                   color: Colors.blue,
@@ -85,7 +85,7 @@ class MainTaskWidget extends StatelessWidget{
                             Padding(
                               padding: EdgeInsets.symmetric(vertical: 5,horizontal: 20),
                               child: Container(
-                                height: 80,
+                                height: variableData.screenHeight() * 0.099667,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
                                   color: Colors.blue,
@@ -95,7 +95,7 @@ class MainTaskWidget extends StatelessWidget{
                           ],
                         ),
                       ),
-                    Container(height: 80,color: Colors.white,),
+                    Container(height: variableData.screenHeight() * 0.099667,color: Colors.white,),
 
                   ],
                 ),

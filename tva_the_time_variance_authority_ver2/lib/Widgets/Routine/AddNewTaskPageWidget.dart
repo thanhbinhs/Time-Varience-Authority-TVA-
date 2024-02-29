@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'VariablesDataRoutineClass.dart';
+
 class AddNewTaskPageWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context){
+    VariableData variableData = VariableData(context);
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -12,7 +15,8 @@ class AddNewTaskPageWidget extends StatelessWidget{
             Padding(
               padding: EdgeInsets.all(15),
               child: Container(
-                height: 55,width: 55,
+                height: variableData.screenHeight()*0.06852,
+                width: variableData.screenHeight()*0.06852,
                 //color: Colors.blue,
                 decoration: BoxDecoration(
                   color: Colors.yellow,
@@ -49,7 +53,7 @@ class AddNewTaskPage extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width; //411.428571
     return Container(
       width: screenWidth,
-      height: screenHeight - 65,
+      height: screenHeight - screenHeight*0.08098,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         //color: Colors.orange,
@@ -63,7 +67,7 @@ class AddNewTaskPage extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 50,
+            height: screenHeight*0.06229,
             color: Colors.orange,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
