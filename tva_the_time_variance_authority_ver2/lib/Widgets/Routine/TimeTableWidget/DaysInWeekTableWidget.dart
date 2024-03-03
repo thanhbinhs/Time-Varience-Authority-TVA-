@@ -3,9 +3,6 @@ import '../VariablesDataRoutineClass.dart';
 
 
 
-
-
-
 class  DaysInWeekTableWidget extends StatefulWidget{
   @override
   State<DaysInWeekTableWidget> createState() => _DaysInWeekTableWidgetState();
@@ -34,10 +31,22 @@ class _DaysInWeekTableWidgetState extends State<DaysInWeekTableWidget> {
     DateTime lastDayOfMonth = DateTime(now.year, now.month + 1, 0);
     int lastDayOfMonthAsInt = lastDayOfMonth.day;
 
+
+    ScrollController _controller = ScrollController();
+    void _scrollToContainer(int index) {
+      double offset = (index - 3) * 116.0; // 116 là chiều cao của container và khoảng cách giữa chúng
+      _controller.animateTo(
+        offset,
+        duration: Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
+      );
+    }
+
     return  Container(
       height: variableData.screenHeight()*0.11,
       //color: Colors.blue,
       child: ListView(
+        controller: _controller,
         scrollDirection: Axis.horizontal,
         children: List.generate(lastDayOfMonthAsInt, (index) =>
             Padding(
@@ -52,10 +61,11 @@ class _DaysInWeekTableWidgetState extends State<DaysInWeekTableWidget> {
                   });
                 },
                 child: Container(
+
                   width: variableData.screenHeight()*0.05606,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: (isPressedDayInWeek[index] || burnIndex == index) ? Colors.orange : Color(0xFFF0FFF0),
+                    color: (isPressedDayInWeek[index] || burnIndex == index) ? Colors.blue : variableData.colorBackGround,
                   ),
                   child: Column(
                     children: [
@@ -64,8 +74,8 @@ class _DaysInWeekTableWidgetState extends State<DaysInWeekTableWidget> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              height: variableData.screenHeight()*0.037375,
-                              //color: Colors.blue,
+                              height: variableData.screenHeight()*0.034,
+                              // color: Colors.blue,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -86,7 +96,7 @@ class _DaysInWeekTableWidgetState extends State<DaysInWeekTableWidget> {
                               width: variableData.screenHeight()*0.037375,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: (isPressedDayInWeek[index] || burnIndex == index) ? Colors.white : Color(0xFFF0FFF0),
+                                color: (isPressedDayInWeek[index] || burnIndex == index) ? Colors.white : variableData.colorBackGround,
                                 border: Border.all(
                                   color: Colors.grey,
                                   width: 0.1,

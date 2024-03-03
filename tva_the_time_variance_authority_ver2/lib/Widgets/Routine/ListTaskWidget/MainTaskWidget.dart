@@ -8,7 +8,7 @@ class MainTaskWidget extends StatelessWidget{
     return Container(
       height: variableData.screenHeight() * 0.69,
       width: variableData.screenWidth(),
-      //color: Colors.green,
+      color: variableData.colorBackGround,
       child: Stack(
         children: [
           Container(

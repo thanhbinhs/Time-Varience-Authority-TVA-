@@ -20,7 +20,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     VariableData variableData = VariableData(context);
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Column(
+
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           if (currentIndex == 0) RoutineWidget(),

@@ -11,6 +11,19 @@ class VariableData {
     return MediaQuery.of(context).size.width;
   }
 
+  List<Color> colorList = [
+    Color.fromARGB(255, 255, 200, 223),
+    Color.fromARGB(255, 255, 235, 205),
+    Color.fromARGB(255, 255, 250, 180),
+    Color.fromARGB(255, 220, 235, 220),
+    Color.fromARGB(255, 224, 255, 255),
+    Color.fromARGB(255, 218, 190, 238),
+    Color.fromARGB(255, 195, 195, 195),
+  ];
+  Color colorBackGround = Color.fromARGB(255, 245, 240, 245);
+  Color colorIsPressed =   Color.fromARGB(255, 245, 190, 245);
+  Color colorCurDay = Color.fromARGB(255, 245, 220, 245);
+
   String changeFormatDay(int dayNumber) {
     if(dayNumber > 7){
       dayNumber = dayNumber % 7;
@@ -44,6 +57,10 @@ class VariableData {
     }
     return formattedDay;
   }
+
+
+
+
 
 
 }

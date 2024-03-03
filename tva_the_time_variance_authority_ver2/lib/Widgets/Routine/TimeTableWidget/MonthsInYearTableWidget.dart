@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
 import '../VariablesDataRoutineClass.dart';
+
+
 
 class MonthsInYearTableWWidget extends StatefulWidget{
   @override
@@ -12,7 +13,6 @@ class _MonthsInYearTableWWidgetState extends State<MonthsInYearTableWWidget> {
   int currentYearAsInt = int.parse(DateTime.now().year.toString());
   int currentMonthAsInt = int.parse(DateTime.now().month.toString());
   int currentDateAsInt = int.parse(DateTime.now().day.toString());
-
   @override
   Widget build(BuildContext context){
     VariableData variableData = VariableData(context);
@@ -29,8 +29,9 @@ class _MonthsInYearTableWWidgetState extends State<MonthsInYearTableWWidget> {
                   InkWell(
                     onTap: (){
                       //**********************************************
+                      setState(() {
 
-
+                      });
                     },
                     child: Container(
                         height: variableData.screenHeight()*0.031146,
@@ -70,5 +71,6 @@ class _MonthsInYearTableWWidgetState extends State<MonthsInYearTableWWidget> {
         ],
       ),
     );
+
   }
 }
