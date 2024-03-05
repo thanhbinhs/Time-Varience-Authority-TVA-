@@ -20,9 +20,10 @@ class VariableData {
     Color.fromARGB(255, 218, 190, 238),
     Color.fromARGB(255, 195, 195, 195),
   ];
-  Color colorBackGround = Color.fromARGB(255, 245, 240, 245);
-  Color colorIsPressed =   Color.fromARGB(255, 245, 190, 245);
-  Color colorCurDay = Color.fromARGB(255, 245, 220, 245);
+  Color colorBackGround = Color.fromARGB(255, 243, 239, 255);
+
+  Color colorIsPressed =   Color.fromARGB(255, 210, 181, 255);
+  Color colorCurDay = Color.fromARGB(255, 210, 141, 255);
 
   String changeFormatDay(int dayNumber) {
     if(dayNumber > 7){

@@ -15,7 +15,7 @@ class _TimeTableWidgetState extends State<TimeTableWidget> {
   List<bool> isPressedDayInWeek = List.generate(31, (index) => false);
   int currentYearAsInt = int.parse(DateTime.now().year.toString());
   int currentMonthAsInt = int.parse(DateTime.now().month.toString());
-  int dayIsPressed = 0;
+  int dayIsPressed = int.parse(DateTime.now().day.toString());
   int burnIndex = 0;
 
   int _scrollPosition = 0;
@@ -113,12 +113,12 @@ class _TimeTableWidgetState extends State<TimeTableWidget> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Container(
-                              height: 10,
-                              width: 50,
+                              height:  variableData.screenHeight()*0.01245,
+                              width:  variableData.screenHeight()*0.0622,
                               // color: Colors.orange,
                               child: isPressedDayInWeek[index] || burnIndex == index ? Center(
                                 child: CustomPaint(
-                                  size: Size(10, 10),
+                                  size: Size(variableData.screenHeight()*0.01245, variableData.screenHeight()*0.01245),
                                   painter: TrianglePainter(),
                                 ),
                               ) : null,
@@ -137,8 +137,8 @@ class _TimeTableWidgetState extends State<TimeTableWidget> {
                                 });
                               },
                               child: Container(
-                                height: 73,
-                                width: 45,
+                                height: variableData.screenHeight()*0.0909,
+                                width: variableData.screenHeight()*0.056,
                                 decoration: BoxDecoration(
                                   color:   currentDateAsInt == index + 1 ? (variableData.colorCurDay) : (isPressedDayInWeek[index] || burnIndex == index ? variableData.colorIsPressed : variableData.colorBackGround),
                                   borderRadius: BorderRadius.circular(30),
@@ -147,7 +147,7 @@ class _TimeTableWidgetState extends State<TimeTableWidget> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Container(
-                                      height: 35,
+                                      height: variableData.screenHeight()*0.0436,
                                       // color: Colors.white,
                                       child: Center(
                                         child: Text(
@@ -155,15 +155,15 @@ class _TimeTableWidgetState extends State<TimeTableWidget> {
                                           style: TextStyle(
                                             fontSize: 12,
                                             // fontWeight: FontWeight.bold,
-                                            color: (isPressedDayInWeek[index] || burnIndex == index) ? Colors.black : Colors.grey,
+                                            color: (isPressedDayInWeek[index] || burnIndex == index || currentDateAsInt == index + 1) ? Colors.black : Colors.grey,
                                           ),
                                         ),
                                       ),
                                     ),
 
                                     Container(
-                                      height: 30,
-                                      width: 30,
+                                      height: variableData.screenHeight()*0.03737,
+                                      width: variableData.screenHeight()*0.03737,
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
                                         color: (isPressedDayInWeek[index] || burnIndex == index) ? Colors.white : variableData.colorBackGround,
@@ -176,7 +176,7 @@ class _TimeTableWidgetState extends State<TimeTableWidget> {
                                         child: Text(
                                           (index + 1 <= lastDayOfMonthAsInt) ? ('${index + 1}') : '',
                                           style: TextStyle(
-                                            color:(isPressedDayInWeek[index] || burnIndex == index) ? Colors.black : Colors.grey,
+                                            color:(isPressedDayInWeek[index] || burnIndex == index || currentDateAsInt == index + 1) ? Colors.black : Colors.grey,
                                             fontSize: 12,
                                             // fontWeight: FontWeight.bold,
                                           ),
