@@ -44,38 +44,39 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBsXsj7J6zIGGlx3TA_5vbvwrNwE823t7A',
-    appId: '1:376656909722:web:766ea2c806d744e2dbd623',
-    messagingSenderId: '376656909722',
-    projectId: 'fir-signin-ex',
-    authDomain: 'fir-signin-ex.firebaseapp.com',
-    storageBucket: 'fir-signin-ex.appspot.com',
-    measurementId: 'G-QFZ0R2Y8BD',
+    apiKey: 'AIzaSyBjumnGQ_Ic78rNDzB_vOBFO2sRdr2rn0k',
+    appId: '1:1030738894261:web:6e5b6fe2fe132a5f9b4dfc',
+    messagingSenderId: '1030738894261',
+    projectId: 'time-varience-authority-49dcd',
+    authDomain: 'time-varience-authority-49dcd.firebaseapp.com',
+    storageBucket: 'time-varience-authority-49dcd.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBuXUXRrKk9Ub6tUwhMR3XriDeIBOv9mDE',
-    appId: '1:376656909722:android:b50bcf73079f7005dbd623',
-    messagingSenderId: '376656909722',
-    projectId: 'fir-signin-ex',
-    storageBucket: 'fir-signin-ex.appspot.com',
+    apiKey: 'AIzaSyDPe9RiaKULhNUpAiiVlBeoSVkB03ZlFRo',
+    appId: '1:1030738894261:android:2569dd8c2122abd09b4dfc',
+    messagingSenderId: '1030738894261',
+    projectId: 'time-varience-authority-49dcd',
+    storageBucket: 'time-varience-authority-49dcd.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyA3SeEknU3V8BDc3X8R-fG9R8cDsgpEQeM',
-    appId: '1:376656909722:ios:9e272ffde438857adbd623',
-    messagingSenderId: '376656909722',
-    projectId: 'fir-signin-ex',
-    storageBucket: 'fir-signin-ex.appspot.com',
-    iosBundleId: 'com.example.firebaseAuthen',
+    apiKey: 'AIzaSyB5Pn2RGEikYMD8uzhz8cllrbW4eHuUdQE',
+    appId: '1:1030738894261:ios:9a27351c4142f9899b4dfc',
+    messagingSenderId: '1030738894261',
+    projectId: 'time-varience-authority-49dcd',
+    storageBucket: 'time-varience-authority-49dcd.appspot.com',
+    iosClientId: '1030738894261-v8s4l2a0bj3kg09vjqdrfpoqov78as2l.apps.googleusercontent.com',
+    iosBundleId: 'com.example.tvaTimeVarienceAuthority',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyA3SeEknU3V8BDc3X8R-fG9R8cDsgpEQeM',
-    appId: '1:376656909722:ios:2164b5e070450ea2dbd623',
-    messagingSenderId: '376656909722',
-    projectId: 'fir-signin-ex',
-    storageBucket: 'fir-signin-ex.appspot.com',
-    iosBundleId: 'com.example.firebaseAuthen.RunnerTests',
+    apiKey: 'AIzaSyB5Pn2RGEikYMD8uzhz8cllrbW4eHuUdQE',
+    appId: '1:1030738894261:ios:70150229eafbf63e9b4dfc',
+    messagingSenderId: '1030738894261',
+    projectId: 'time-varience-authority-49dcd',
+    storageBucket: 'time-varience-authority-49dcd.appspot.com',
+    iosClientId: '1030738894261-nh0acdnrb3ov7ie2d88fqctd1tgha2dd.apps.googleusercontent.com',
+    iosBundleId: 'com.example.tvaTimeVarienceAuthority.RunnerTests',
   );
 }

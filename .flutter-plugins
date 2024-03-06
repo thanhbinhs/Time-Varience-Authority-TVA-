@@ -1,4 +1,12 @@
 # This is a generated file; do not edit or check into version control.
+desktop_webview_auth=C:\\Users\\thanh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\desktop_webview_auth-0.0.15\\
+firebase_auth=C:\\Users\\thanh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_auth-4.17.7\\
+firebase_auth_web=C:\\Users\\thanh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_auth_web-5.9.7\\
 firebase_core=C:\\Users\\thanh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_core-2.26.0\\
 firebase_core_web=C:\\Users\\thanh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_core_web-2.11.5\\
+firebase_dynamic_links=C:\\Users\\thanh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_dynamic_links-5.4.16\\
+google_sign_in=C:\\Users\\thanh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\google_sign_in-6.2.1\\
+google_sign_in_android=C:\\Users\\thanh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\google_sign_in_android-6.1.21\\
+google_sign_in_ios=C:\\Users\\thanh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\google_sign_in_ios-5.7.4\\
+google_sign_in_web=C:\\Users\\thanh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\google_sign_in_web-0.12.3+3\\
 sqflite=C:\\Users\\thanh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\sqflite-2.3.2\\

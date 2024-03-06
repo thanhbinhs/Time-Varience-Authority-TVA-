@@ -1,7 +1,18 @@
-import 'package:tva_time_varience_authority/screens/signin_screen.dart';
+import 'package:tva_time_varience_authority/Pages/LoginPage.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:tva_time_varience_authority/repository/authentication/authentication.dart';
+import 'firebase_options.dart';
+import 'package:get/get.dart';
 
-void main() {
+const clientId = '1030738894261';
+
+
+void main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MyApp());
 }
 
@@ -13,11 +24,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SignInScreen(),
+      home: LoginPage(),
     );
   }
 }

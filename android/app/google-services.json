@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1030738894261",
+    "project_id": "time-varience-authority-49dcd",
+    "storage_bucket": "time-varience-authority-49dcd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030738894261:android:2569dd8c2122abd09b4dfc",
+        "android_client_info": {
+          "package_name": "com.example.tva_time_varience_authority"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030738894261-cc3h564poqns4m2i503aff3iclq0afg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPe9RiaKULhNUpAiiVlBeoSVkB03ZlFRo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030738894261-cc3h564poqns4m2i503aff3iclq0afg2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
