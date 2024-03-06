@@ -9,7 +9,7 @@ class MainTaskWidget extends StatelessWidget{
   Widget build(BuildContext context){
     VariableData variableData = VariableData(context);
     return Container(
-      height: variableData.screenHeight() * 0.69,
+      height: variableData.screenHeight() * 0.803,
       width: variableData.screenWidth(),
       color: variableData.colorBackGround,
       child: Stack(
@@ -33,7 +33,7 @@ class MainTaskWidget extends StatelessWidget{
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Container(
-                height: variableData.screenHeight() * 0.683,
+                height: variableData.screenHeight() * 0.8,
                 // color: Colors.blue,
                 child: ListView(
                   padding: EdgeInsets.all(0),
@@ -68,7 +68,7 @@ class MainTaskWidget extends StatelessWidget{
                       ),
                     ),
 
-                    // for(int i = 0; i < 10; i++)
+                    for(int i = 0; i < 10; i++)
                        Container(
                         height: variableData.screenHeight() * 0.11,
                          // color: Colors.black,
@@ -146,6 +146,10 @@ class MainTaskWidget extends StatelessWidget{
                                                               ],
                                                             ),
                                                       ),
+                                                      Container(
+                                                        height: 32,
+                                                        color: Colors.green,
+                                                      ),
                                                     ],
                                                   ),
                                                 ),
@@ -185,30 +189,3 @@ void doNothing(BuildContext context) {
 }
 
 
-
-// PageView(
-// scrollDirection: Axis.horizontal,
-// children: [
-// Padding(
-// padding: EdgeInsets.symmetric(vertical: 5,horizontal: 20),
-// child: Container(
-// height: variableData.screenHeight() * 0.099667,
-// decoration: BoxDecoration(
-// borderRadius: BorderRadius.circular(20),
-// color: Colors.blue,
-// ),
-// ),
-// ),
-//
-// Padding(
-// padding: EdgeInsets.symmetric(vertical: 5,horizontal: 20),
-// child: Container(
-// height: variableData.screenHeight() * 0.099667,
-// decoration: BoxDecoration(
-// borderRadius: BorderRadius.circular(20),
-// color: Colors.blue,
-// ),
-// ),
-// ),
-// ],
-// ),

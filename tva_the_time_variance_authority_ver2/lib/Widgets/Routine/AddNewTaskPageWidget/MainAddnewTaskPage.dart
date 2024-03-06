@@ -90,8 +90,8 @@ class _AddNewTaskPageState extends State<AddNewTaskPage> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Container(
-                height: variableData.screenHeight() * 0.6976,
-                //  color: Colors.yellow,
+                height: variableData.screenHeight() * 0.81,
+                // color: Colors.yellow,
                 child: SingleChildScrollView(
                   child: Column(
                     children: [

@@ -20,13 +20,13 @@ class _AddNewTaskPageWidgetState extends State<AddNewTaskPageWidget> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Padding(
-              padding: const EdgeInsets.all(15),
+              padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 100),
               child: Stack(
                 children: [
                   PhysicalModel(
                     elevation: 5,
                     shadowColor: Color.fromARGB(255, 245, 245, 245),
-                    color: Colors.blue,
+                    color: Color.fromARGB(150, 112,76,230),
                     shape: BoxShape.circle,
                     child: SizedBox(
                       width: variableData.screenHeight()*0.06852,
@@ -38,7 +38,7 @@ class _AddNewTaskPageWidgetState extends State<AddNewTaskPageWidget> {
                     width: variableData.screenHeight()*0.06852,
                     //color: Colors.blue,
                     decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 112,76,230),
+                      color: Color.fromARGB(150, 112,76,230),
                       shape: BoxShape.circle,
                     ),
                     child: IconButton(
@@ -52,8 +52,6 @@ class _AddNewTaskPageWidgetState extends State<AddNewTaskPageWidget> {
                       ),
                     ),
                   ),
-
-
                 ],
               ),
             ),

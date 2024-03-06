@@ -10,9 +10,9 @@ class RoutineWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     VariableData variableData = VariableData(context);
     return Container(
-      height: variableData.screenHeight() * 0.889,
+      height: variableData.screenHeight(),
       width: variableData.screenWidth(),
-      color: Color.fromRGBO(240,255,240,1),
+      color: Color.fromARGB(255, 243, 239, 255),
       child: Stack(
         children: [
           ListTaskWidget(),

@@ -8,7 +8,7 @@ class LibraryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     VariableData variableData = VariableData(context);
     return Container(
-      height: variableData.screenHeight() * 0.889,
+      height: variableData.screenHeight(),
       color: Colors.orange,
 
     );
